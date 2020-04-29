@@ -1,0 +1,10 @@
+stanfordcorenlp
+librosa
+epitran
+tqdm
+regex
+transformers
+bpemb
+python_speech_features
+torchsummary
+torchaudio
