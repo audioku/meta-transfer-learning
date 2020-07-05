@@ -41,5 +41,16 @@ Kindly check the /data/ directory to check the data split and labels.
 - Install PyTorch (Tested in PyTorch 1.0 and Python 3.6)
 - Install library dependencies (requirement.txt)
 
+## Run the code
+- Meta-Transfer Learning
+```
+python meta_transfer_train.py --train-manifest-list data/manifests/cv-valid-train_manifest.csv data/manifests/hkust_16khz_train_manifest.csv data/manifests/seame_phaseII_train_manifest.csv --train-partition-list 1 1 1 --valid-manifest-list data/manifests/cv-valid-dev_manifest.csv data/manifests/hkust_16khz_dev_manifest.csv data/manifests/seame_phaseII_val_manifest.csv --name mtl_enc2_dec4_512_b8_16khz_copy_grad --cuda --k-train 8 --k-valid 8 --labels-path data/labels/hkust_seame_labels.json --lr 1e-4 --save-folder save/ --save-every 10000 --feat_extractor vgg_cnn --dropout 0.1 --num-enc-layers 2 --num-dec-layers 4 --num-heads 8 --dim-model 512 --dim-key 64 --dim-value 64 --dim-input 5120 --dim-inner 512 --dim-emb 512 --early-stop cer,200 --src-max-len 5000 --tgt-max-len 2500 --evaluate-every 10000 --epochs 1000000 --sample-rate 16000 --copy-grad
+```
+
+- Joint training
+```
+python joint_train.py --train-manifest-list data/manifests/cv-valid-train_manifest.csv data/manifests/hkust_16khz_train_manifest.csv data/manifests/seame_phaseII_train_manifest.csv --valid-manifest-list data/manifests/cv-valid-dev_manifest.csv data/manifests/hkust_16khz_dev_manifest.csv data/manifests/seame_phaseII_val_manifest.csv --cuda --k-train 8 --labels-path data/labels/hkust_seame_labels.json --lr 1e-4 --name joint_enc2_dec4_512_b8_16khz --save-folder save/ --save-every 10000 --feat_extractor vgg_cnn --dropout 0.1 --num-enc-layers 2 --num-dec-layers 4 --num-heads 8 --dim-model 512 --dim-key 64 --dim-value 64 --dim-input 5120 --dim-inner 512 --dim-emb 512 --early-stop cer,200 --src-max-len 5000 --tgt-max-len 2500 --evaluate-every 10000 --epochs 10000000 --sample-rate 16000 --train-partition-list 1 1 1
+```
+
 ## Bug Report
 Feel free to create an issue or send email to giwinata@connect.ust.hk
