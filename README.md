@@ -3,7 +3,7 @@
 
 <img src="img/pytorch-logo-dark.png" width="10%"> [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
-This is the implementation of our papers accepted in [ACL](https://www.aclweb.org/anthology/2020.acl-main.348/) 2020.
+This is the implementation of our paper accepted in [ACL](https://www.aclweb.org/anthology/2020.acl-main.348/) 2020.
 
 This code has been written using PyTorch. If you use any source codes or datasets included in this toolkit in your work, please cite the following papers.
 ```
@@ -29,8 +29,8 @@ This code has been written using PyTorch. If you use any source codes or dataset
 An increasing number of people in the world today speak a mixed-language as a result of being multilingual. However, building a speech recognition system for code-switching remains difficult due to the availability of limited resources and the expense and significant effort required to collect mixed-language data. We therefore propose a new learning method, meta-transfer learning, to transfer learn on a code-switched speech recognition system in a low-resource setting by judiciously extracting information from high-resource monolingual datasets. Our model learns to recognize individual languages, and transfer them so as to better recognize mixed-language speech by conditioning the optimization on the code-switching data. Based on experimental results, our model outperforms existing baselines on speech recognition and language modeling tasks, and is faster to converge.
 
 ## Data
-- SEAME Phase II datasets
-- HKUST
+- SEAME Phase II datasets (https://catalog.ldc.upenn.edu/LDC2015S04)
+- HKUST (https://catalog.ldc.upenn.edu/LDC2005S15)
 - CommonVoice v3 (Nov 2019)
 Kindly check the /data/ directory to check the data split and labels.
 
