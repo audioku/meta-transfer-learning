@@ -35,7 +35,7 @@ An increasing number of people in the world today speak a mixed-language as a re
 Kindly check the /data/ directory to check the data split and labels.
 
 ## Model Architecture
-<img src="img/model.jpg" width=40%/>
+<img src="img/model.png" width=40%/>
 
 ## Setup
 - Install PyTorch (Tested in PyTorch 1.0 and Python 3.6)
