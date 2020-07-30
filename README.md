@@ -5,7 +5,7 @@
 
 This is the implementation of our paper accepted in [ACL](https://www.aclweb.org/anthology/2020.acl-main.348/) 2020.
 
-This code has been written using PyTorch. If you use any source codes or datasets included in this toolkit in your work, please cite the following papers.
+This code has been written using PyTorch. If you use any source codes or datasets included in this toolkit in your work, please cite the following paper.
 ```
 @inproceedings{winata-etal-2020-meta,
     title = "Meta-Transfer Learning for Code-Switched Speech Recognition",
@@ -31,8 +31,8 @@ An increasing number of people in the world today speak a mixed-language as a re
 ## Data
 - SEAME Phase II datasets (https://catalog.ldc.upenn.edu/LDC2015S04)
 - HKUST (https://catalog.ldc.upenn.edu/LDC2005S15)
-- CommonVoice v3 (Nov 2019)
-Kindly check the /data/ directory to check the data split and labels.
+- CommonVoice v2 (Jun 2019)
+Kindly check the /data/ directory to check the data split and labels. This is the direct link (https://voice-prod-bundler-ee1969a6ce8178826482b88e843c335139bd3fb4.s3.amazonaws.com/cv-corpus-2/en.tar.gz)
 
 ## Model Architecture
 <img src="img/model.png" width=40%/>
